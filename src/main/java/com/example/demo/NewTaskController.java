@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import java.io.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,12 +37,25 @@ public class NewTaskController {
     public void buttonSave(){
         String title = newtitlefield.getText();
         String description = newdescriptionfield.getText();
+        LocalDate dueDate = duedatee.getValue();
+        String category = categoryy.getValue();
+        Integer priority = priorityy.getValue();
+
+
 
         if(title.isEmpty()){
-            return;
+            if(title.isEmpty()){
+                // FIX: Add an alert so the user knows why nothing happened
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Missing Information");
+                alert.setHeaderText(null);
+                alert.setContentText("Please enter a Title for the task!");
+                alert.showAndWait();
+                return;}
+
         }
 
-        ToDo newTask = new ToDo(title, description, duedatee.getValue(), categoryy.getValue(), priorityy.getValue() );
+        ToDo newTask = new ToDo(title, description, dueDate, category, priority );
 
         List<ToDo>allTasks = loadCurrentTasks();
         allTasks.add(newTask);
@@ -50,6 +64,7 @@ public class NewTaskController {
         Stage stage = (Stage) buttonSave.getScene().getWindow();
         stage.close();
     }
+
 
     private List<ToDo> loadCurrentTasks() {
         File file = new File(FILE_PATH);

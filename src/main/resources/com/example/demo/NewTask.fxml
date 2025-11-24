@@ -21,13 +21,13 @@
         <Label layoutX="98.0" layoutY="315.0" text="CATEGORY:" />
         <Label layoutX="102.0" layoutY="387.0" text="PRIORITY:" />
 
-        <TextField fx:id="newtitlefield" layoutX="203.0" layoutY="101.0" prefHeight="25.0" prefWidth="174.0" />
-        <TextField fx:id="newdescriptionfield" layoutX="203.0" layoutY="169.0" prefHeight="25.0" prefWidth="174.0" />
-        <DatePicker fx:id="duedatee" layoutX="203.0" layoutY="239.0" />
-        <ComboBox fx:id="categoryy" layoutX="202.0" layoutY="311.0" prefHeight="25.0" prefWidth="174.0" />
-        <ComboBox fx:id="priorityy" layoutX="202.0" layoutY="383.0" prefHeight="25.0" prefWidth="180.0" />
+        <TextField fx:id="newtitlefield" layoutX="203.0" layoutY="101.0" prefHeight="25.0" prefWidth="417.0" />
+        <TextField fx:id="newdescriptionfield" layoutX="203.0" layoutY="169.0" prefHeight="25.0" prefWidth="417.0" />
+        <DatePicker fx:id="duedatee" layoutX="203.0" layoutY="239.0" prefHeight="25.0" prefWidth="417.0" />
+        <ComboBox fx:id="categoryy" layoutX="202.0" layoutY="311.0" prefHeight="25.0" prefWidth="417.0" />
+        <ComboBox fx:id="priorityy" layoutX="202.0" layoutY="383.0" prefHeight="25.0" prefWidth="417.0" />
 
-        <Button fx:id="buttonSave" onAction="#buttonSave" layoutX="610.0" layoutY="448.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="ADD"> <font>
+        <Button fx:id="buttonSave" layoutX="610.0" layoutY="448.0" mnemonicParsing="false" onAction="#buttonSave" style="-fx-background-color: lightblue;" text="ADD"> <font>
             <Font size="15.0" />
         </font>
         </Button>
